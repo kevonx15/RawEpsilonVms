@@ -1,0 +1,15 @@
+﻿body {
+    /*Space between nav bar*/
+    padding-top: 50px; 
+}
+
+/*setting a default class for text, might use it for labels and small stuff, everything
+    else is in bootstrap
+*/
+.defaultText{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
+.padRight8px{
+    padding-right: 8px;
+}

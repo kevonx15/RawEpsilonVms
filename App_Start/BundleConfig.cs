@@ -9,23 +9,36 @@ namespace RawEpsilonVms
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                   "~/js/lib/jquery.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/js/lib/bootstrap.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
+                        "~/js/lib/jquery.dataTables.min.js",
+                        "~/js/lib/dataTables.bootstrap.min.js",
+                        "~/js/lib/dataTables.colReorder.min.js"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                        "~/js/lib/jquery-ui.min.js"));
+
+            /*
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
+            */
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
-
+            /*In css the file at the top is usually overwritten by the one at the bottom in that order*/
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/css/bootstrap.min.css",
+                      "~/css/jquery.dataTables.min.css",
+                      "~/css/jquery.dataTables_themeroller.css",
+                      "~/css/dataTables.bootstrap.min.css",
+                      "~/css/colReorder.bootstrap.min.css",
+                      "~/css/jquery-ui.min.css",
+                      "~/css/site.css"));
         }
     }
 }
